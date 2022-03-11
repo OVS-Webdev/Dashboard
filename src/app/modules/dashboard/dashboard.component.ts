@@ -47,9 +47,12 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   pie= [] as  any;
   datasource= [] as any;
 
+
   @ViewChild(MatPaginator, {static: true}) paginator!: MatPaginator;
 
-  constructor(private _dashboardService: DashboardService) { }
+  constructor(private _dashboardService: DashboardService ) {
+   
+   }
 
   ngOnInit() {
     this.bigChart = this._dashboardService.getbigChart();

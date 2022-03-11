@@ -1,11 +1,18 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DashboardService {
 
-  constructor() { }
+  url= 'http://192.168.1.40:3000/department';
+
+  constructor(private http: HttpClient) { 
+    this.http.get(this.url).toPromise().then(data => {
+      console.log(data);
+    });
+  }
 
   getbigChart() {
     return[        
