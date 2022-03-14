@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "ng dashboard",
     "dev:ssr": "ng run dashboard:serve-ssr",
     "serve:ssr": "node dist/dashboard/server/main.js",
     "build:ssr": "ng build && ng run dashboard:server",
