@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
@@ -47,10 +48,14 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   pie= [] as  any;
   datasource= [] as any;
 
+  // test= [] as  any;
+  test1= [] as  any;
+  // url= 'https://ceo-dashboard-backend.vercel.app/department';
+
 
   @ViewChild(MatPaginator, {static: true}) paginator!: MatPaginator;
 
-  constructor(private _dashboardService: DashboardService ) {
+  constructor(private _dashboardService: DashboardService, private http: HttpClient ) {
    
    }
 
@@ -58,6 +63,18 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     this.bigChart = this._dashboardService.getbigChart();
     this.card = this._dashboardService.getcards();
     this.pie = this._dashboardService.getPie();
+
+    //JSON
+    // this.http.get(this.url).subscribe(
+      // data => {
+        // this.test = data as object [];
+        // console.log(this.test);
+      // });
+    //JSON ends here
+
+    this.test1 = this._dashboardService.getData();
+    console.log(this.test1);
+    
   }
   ngAfterViewInit(){
     this.dataSource.paginator= this.paginator;

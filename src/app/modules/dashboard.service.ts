@@ -6,13 +6,24 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DashboardService {
 
-  url= 'http://192.168.1.40:3000/department';
+  url= 'https://ceo-dashboard-backend.vercel.app/department';
+
+  test = [] as any;
 
   constructor(private http: HttpClient) { 
-    this.http.get(this.url).toPromise().then(data => {
-      console.log(data);
-    });
+    // this.http.get(this.url).toPromise().then(test => {
+    //   console.log(test);
+    // });
   }
+
+  getData(){
+    this.http.get(this.url).subscribe(
+      data => {
+        this.test = data as object [];
+        console.log(this.test);
+      }); 
+  }
+
 
   getbigChart() {
     return[        
