@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "name": "nodejs-mysql",
+  "name": "dashboard",
   "builds": [
-    { "src": "app.js", "use": "@vercel/node" }
+    { "src": "angular.js", "use": "@vercel/node" }
   ],
   "routes": [
     { "src": "/(.*)", "dest": "/app.js" }
