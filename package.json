@@ -4,14 +4,11 @@
   "scripts": {
      "ng": "ng",
     "start": "ng serve",
-    "build-dev": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "dev": "ng serve --port $PORT",
+    "build": "ng build",
     "test": "ng test",
-    "dev:ssr": "ng run test:serve-ssr",
-    "serve:ssr": "node dist/test/server/main.js",
-    "build:ssr": "ng build && ng run test:server",
-    "prerender": "ng run test:prerender",
-    "vercel-build": "npm run build:ssr"
+    "lint": "ng lint",
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
