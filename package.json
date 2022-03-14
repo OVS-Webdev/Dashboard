@@ -13,6 +13,9 @@
     "prerender": "ng run test:prerender",
     "vercel-build": "npm run build:ssr"
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.2.0",
