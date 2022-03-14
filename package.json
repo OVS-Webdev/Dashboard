@@ -7,14 +7,11 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "dev:ssr": "ng run test:serve-ssr",
-    "serve:ssr": "node dist/test/server/main.js",
-    "build:ssr": "ng build && ng run test:server",
-    "prerender": "ng run test:prerender",
+    "dev:ssr": "ng run dashboard:serve-ssr",
+    "serve:ssr": "node dist/dashboard/server/main.js",
+    "build:ssr": "ng build && ng run dashboard:server",
+    "prerender": "ng run dashboard:prerender",
     "vercel-build": "npm run build:ssr"
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
   },
   "private": true,
   "dependencies": {
