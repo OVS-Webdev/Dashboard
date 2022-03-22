@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DashboardService {
 
-  url= 'https://ceo-dashboard-backend.vercel.app/department';
+  url= 'https://ceo-dashboard-backend-ovs-webdev.vercel.app/client';
   // url= 'http://192.168.1.40:7000/department';
 
   test = [] as any;
